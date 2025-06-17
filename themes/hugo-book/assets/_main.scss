@@ -2,7 +2,6 @@ html {
   font-size: $font-size-base;
   scroll-behavior: smooth;
   touch-action: manipulation;
-  scrollbar-gutter: stable;
 }
 
 body {
@@ -49,11 +48,11 @@ aside nav ul {
   list-style: none;
 
   li {
+    margin: 1em 0;
     position: relative;
   }
 
-  a, span {
-    padding: .5em 0;
+  a {
     display: block;
   }
 
@@ -136,12 +135,10 @@ a .book-icon {
 
   input.toggle + label::after {
     content: "▸";
-    align-self: center;
   }
 
   input.toggle:checked + label::after {
     content: "▾";
-    align-self: center;
   }
 }
 
@@ -157,7 +154,7 @@ body[dir="rtl"] .book-menu {
 }
 
 .book-section-flat {
-  margin: $padding-16 0;
+  margin: $padding-16 * 2 0;
 
   > a,
   > span,
@@ -177,7 +174,7 @@ body[dir="rtl"] .book-menu {
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 4;
+  margin-bottom: $padding-16 * 2;
 
   .book-post-date img {
     height: 1em;
@@ -212,7 +209,7 @@ body[dir="rtl"] .book-menu {
 
 .book-search {
   position: relative;
-  margin: $padding-8 0;
+  margin: $padding-16 0;
   border-bottom: 1px solid transparent;
 
   input {
@@ -244,10 +241,6 @@ body[dir="rtl"] .book-menu {
     border-radius: 50%;
 
     @include spin(1s);
-  }
-
-  ul a {
-    padding-bottom: 0;
   }
 
   small {
@@ -286,7 +279,7 @@ body[dir="rtl"] .book-menu {
 }
 
 .book-languages {
-  margin-bottom: $padding-16;
+  margin-block-end: $padding-16 * 2;
 
   ul {
     padding-inline-start: 1.5em;
