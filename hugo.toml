@@ -1,0 +1,8 @@
+baseURL = 'https://kavehmoradian.github.io/three-easy-pieces/'
+languageCode = 'en-us'
+title = 'My Hugo Book'
+theme = 'hugo-book'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
